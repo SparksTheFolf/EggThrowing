@@ -1,6 +1,7 @@
 package com.eggthrowing.mainplugin;
 
 import org.bukkit.Bukkit;
+import org.bukkit.Sound;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -30,6 +31,7 @@ public class Main extends JavaPlugin implements Listener{
 		Player player = e.getPlayer();
 		
 		player.sendMessage(ChatColor.RED + "Egg Thrown!");
+		e.getPlayer().playSound(e.getPlayer().getLocation(), Sound.BLOCK_NOTE_PLING, 1.0F, 1.0F);
 	}
 
 }
